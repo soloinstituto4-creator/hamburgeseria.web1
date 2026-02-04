@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+  background: #000;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  color: #f5c16c;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #f5c16c;
+  font-size: 1.8rem;
+}
+
+/* NAV */
+.nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background: #000;
+  width: 200px;
+  border-left: 1px solid #222;
+}
+
+.nav a {
+  color: #f5f5f5;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid #222;
+}
+
+.nav a:hover {
+  background: #1a1a1a;
+}
+
+/* HERO */
+.hero {
+  height: 75vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.7)
+    ),
+    url("../img/burger1.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #f5c16c;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: #b71c1c;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e53935;
+}
+
+/* SECCIONES */
+.about, .contact {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.about h3,
+.contact h3 {
+  color: #f5c16c;
+  margin-bottom: 1rem;
+}
+
+/* MENÚ */
+.menu-grid {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  color: #f5c16c;
+  margin: 1rem 0 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.card span {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.card button {
+  background: #b71c1c;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #e53935;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  border-top: 1px solid #222;
+  font-size: 0.8rem;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
